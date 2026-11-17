@@ -1,50 +1,752 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/reset.css">
+    <title>Maresia | Spa & Bem-estar</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <section class="inicio">
 
-        <div class="navegacao">
+    <!-- NAVEGAÇÃO -->
 
-            <img class="img-logo" src="./src/img/Logo-maresia.png" alt="logo maresia">
+    <nav class="navbar">
 
-            <a class="item-navegacao" href="">Início</a>
-            <a class="item-navegacao" href="">Serviços</a>
-            <a class="item-navegacao" href="">Produtos</a>
-            <a class="item-navegacao" href="">Pacotes</a>
-            <a class="item-navegacao" href="">Contato</a>
+        <a href="#inicio" class="logo">
+            <img src="./src/img/Logo-maresia.png" alt="Maresia Quiosque de Massagem">
+        </a>
 
-            <div id="divBusca">
-                <img src="./src/img/lupa.png" alt="Buscar..." />
-                <input type="text" id="txtBusca" placeholder="Buscar..." />
-                <button id="btnBusca">Buscar</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#inicio" class="active">Início</a>
+            <a href="#servicos">Massagens</a>
+            <a href="#pacotes">Pacotes</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Quem somos</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#local">Localização</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- TELA INICIAL -->
+    <header class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="subtitle">UM REFÚGIO PARA CORPO E MENTE</span>
+
+            <h1 class="hero-title">
+                <span>M</span><span>A</span><span>R</span><span>E</span><span>S</span><span>I</span><span>A</span>
+            </h1>
+
+            <p>
+                Deixe o mundo na superfície.
+                Mergulhe em uma experiência de calma,
+                cuidado e reconexão.
+            </p>
+
+            <a href="#servicos" class="btn">
+                Descubra nosso universo ↓
+            </a>
+
+        </div>
+
+        <span class="scroll">DESLIZE PARA MERGULHAR</span>
+
+    </header>
+
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+
+        <div class="section-title">
+            <span>RITUAIS DE CUIDADO</span>
+            <h2>Nossos serviços</h2>
+
+            <p>
+                Cada toque tem um propósito.
+                Escolha a experiência que seu corpo está pedindo hoje.
+            </p>
+        </div>
+
+
+        <div class="services-container">
+
+            <div class="service-card">
+                <div class="service-img img1"></div>
+
+                <div class="service-info">
+                    <h3>Massagem Relaxante</h3>
+                    <p>Um convite para desacelerar.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Massagem Relaxante</h3>
+                    <p>
+                        Movimentos suaves e contínuos que ajudam
+                        a aliviar tensões e proporcionam
+                        tranquilidade.
+                    </p>
+                    <strong>50 minutos · R$ 160</strong>
+                    <button onclick="escolher('Massagem Relaxante')">Escolher</button>
+                </div>
             </div>
 
+
+            <div class="service-card">
+                <div class="service-img img2"></div>
+
+                <div class="service-info">
+                    <h3>Pedras Aquecidas</h3>
+                    <p>Calor que acolhe e renova.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Pedras Aquecidas</h3>
+                    <p>
+                        Pedras mornas utilizadas em movimentos
+                        delicados para uma experiência
+                        acolhedora.
+                    </p>
+                    <strong>70 minutos · R$ 210</strong>
+                    <button onclick="escolher('Pedras Aquecidas')">Escolher</button>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-img img3"></div>
+
+                <div class="service-info">
+                    <h3>Drenagem Suave</h3>
+                    <p>Leveza em cada movimento.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Drenagem Suave</h3>
+                    <p>
+                        Movimentos leves e ritmados,
+                        realizados conforme as necessidades
+                        de cada pessoa.
+                    </p>
+                    <strong>50 minutos · R$ 175</strong>
+                    <button onclick="escolher('Drenagem Suave')">Escolher</button>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-img img4"></div>
+
+                <div class="service-info">
+                    <h3>Massagem Profunda</h3>
+                    <p>Um cuidado focado nas tensões.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Massagem Profunda</h3>
+                    <p>
+                        Manobras específicas para trabalhar
+                        regiões de maior tensão, respeitando
+                        o conforto individual.
+                    </p>
+                    <strong>60 minutos · R$ 190</strong>
+                    <button onclick="escolher('Massagem Profunda')">Escolher</button>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-img img5"></div>
+
+                <div class="service-info">
+                    <h3>Reflexologia</h3>
+                    <p>Uma pausa dedicada aos pés.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Reflexologia</h3>
+                    <p>
+                        Pressões e estímulos em regiões dos pés
+                        para proporcionar conforto.
+                    </p>
+                    <strong>40 minutos · R$ 130</strong>
+                    <button onclick="escolher('Reflexologia')">Escolher</button>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-img img6"></div>
+
+                <div class="service-info">
+                    <h3>Ritual Facial</h3>
+                    <p>Um carinho para sua pele.</p>
+                </div>
+
+                <div class="service-overlay">
+                    <h3>Ritual Facial</h3>
+                    <p>
+                        Limpeza delicada, hidratação e massagem
+                        facial relaxante.
+                    </p>
+                    <strong>45 minutos · R$ 150</strong>
+                    <button onclick="escolher('Ritual Facial')">Escolher</button>
+                </div>
+            </div>
+
+
         </div>
 
-        <div>
-            <h1 class="titulo">Maresia</h1>
-        </div>
+           <div class="explore-area">
+
+                <p>Descubra todos os detalhes de nossas experiências.</p>
+
+                <a href="massagens.html" class="explore-btn">
+                    <span>Conheça nossas massagens</span>
+                    <span class="arrow">↗</span>
+                </a>
+
+            </div>
+
     </section>
 
-        <section class="nossos-servicos">
-            <div class="servicos">
 
-                <h2 class="servico-titulo">Nossos Serviços</h2>
-                <h3>Descubra nossas experiências inesquecíveis.</h3>
+    <!-- QUEM SOMOS -->
+    <section id="sobre">
+
+        <div class="about-container">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+
+                <span>NOSSA ESSÊNCIA</span>
+
+                <h2>
+                    Um oceano de tranquilidade
+                    dentro da cidade.
+                </h2>
+
+                <p>
+                    A Maresia nasceu da ideia de que descansar
+                    deveria fazer parte da rotina.
+
+                    Criamos um espaço inspirado no movimento
+                    do mar: acolhedor, sensorial e feito
+                    para você respirar sem pressa.
+                </p>
+
+                <p>
+                    Nossa equipe reúne profissionais preparados
+                    para adaptar cada atendimento às necessidades
+                    de cada pessoa.
+                </p>
+
+                <div class="stats">
+
+                    <div>
+                        <strong>6</strong>
+                        <span>Rituais de cuidado</span>
+                    </div>
+
+                    <div>
+                        <strong>1:1</strong>
+                        <span>Atenção individual</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Pausa para você</span>
+                    </div>
+
+                </div>
 
             </div>
-        </section>
 
-    
+        </div>
+
+    </section>
+
+
+    <!-- PACOTES ESPECIAIS -->
+    <section id="pacotes">
+
+        <div class="section-title">
+            <span>SUA PAUSA, DO SEU JEITO</span>
+            <h2>Pacotes especiais</h2>
+            <p>
+                Transforme o autocuidado em uma experiência
+                inesquecível.
+            </p>
+        </div>
+
+
+        <div class="packages-container">
+
+            <div class="package-card">
+                <span>PARA COMEÇAR</span>
+                <h3>Maré Serena</h3>
+
+                <p>Uma pausa para deixar a semana mais leve.</p>
+
+                <h2>R$ 249</h2>
+
+                <ul>
+                    <li>Massagem relaxante</li>
+                    <li>Escalda-pés aromático</li>
+                    <li>Chá da estação</li>
+                </ul>
+
+                <button onclick="escolher('Maré Serena')">
+                    Escolher pacote
+                </button>
+            </div>
+
+
+            <div class="package-card featured">
+
+                <span>✧ MAIS ESCOLHIDO</span>
+                <h3>Imersão Azul</h3>
+
+                <p>Um mergulho completo em cuidado e tranquilidade.</p>
+
+                <h2>R$ 389</h2>
+
+                <ul>
+                    <li>Massagem com pedras</li>
+                    <li>Ritual facial hidratante</li>
+                    <li>Chá e mimo Maresia</li>
+                </ul>
+
+                <button onclick="escolher('Imersão Azul')">
+                    Escolher pacote
+                </button>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <span>PARA COMPARTILHAR</span>
+                <h3>Maré a Dois</h3>
+
+                <p>Uma experiência especial para viver acompanhado.</p>
+
+                <h2>R$ 620</h2>
+
+                <ul>
+                    <li>Massagem para duas pessoas</li>
+                    <li>Espaço reservado</li>
+                    <li>Brinde sem álcool</li>
+                </ul>
+
+                <button onclick="escolher('Maré a Dois')">
+                    Escolher pacote
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PACOTE PERSONALIZADO -->
+        <div class="customizer">
+
+            <div>
+                <span>EXPERIÊNCIA PERSONALIZADA</span>
+
+                <h2>Crie sua maré perfeita.</h2>
+
+                <p>
+                    Combine seus tratamentos favoritos
+                    e monte uma experiência exclusiva.
+                </p>
+
+                <h2 id="total">R$ 0</h2>
+                <small>Valor estimado do seu pacote</small>
+            </div>
+
+
+            <div>
+
+                <h3>Escolha seus serviços:</h3>
+
+                <div class="choices">
+
+                    <button class="choice" data-price="160">
+                        Relaxante + R$ 160
+                    </button>
+
+                    <button class="choice" data-price="210">
+                        Pedras + R$ 210
+                    </button>
+
+                    <button class="choice" data-price="150">
+                        Ritual facial + R$ 150
+                    </button>
+
+                    <button class="choice" data-price="130">
+                        Reflexologia + R$ 130
+                    </button>
+
+                    <button class="choice" data-price="65">
+                        Escalda-pés + R$ 65
+                    </button>
+
+                </div>
+
+                <button class="btn" onclick="reservarPersonalizado()">
+                    Reservar meu ritual
+                </button>
+
+            </div>
+
+
+        </div>
+
+         <div class="explore-area">
+
+                <p>Existe uma experiência esperando por você.</p>
+
+                <a href="pacotes.html" class="explore-btn">
+                    <span>Explore nossos pacotes</span>
+                    <span class="arrow">↗</span>
+                </a>
+
+            </div>
+    </section>
+
+
+    <!-- PRODUTOS -->
+    <section id="produtos">
+
+        <div class="section-title">
+            <span>LEVE O CUIDADO COM VOCÊ</span>
+            <h2>Nossa loja</h2>
+            <p>
+                Produtos selecionados para prolongar
+                sua experiência de bem-estar.
+            </p>
+        </div>
+
+
+        <div class="products-container">
+
+            <div class="product-card">
+                <img src="./src/img/Produtos Maresia em Spa Oceânico 1.png" alt="Kit body splash e Loção hidratante">
+                <h3>Kit body splash e Loção hidratante</h3>
+                <p>Óleo corporal nutritivo.</p>
+                <strong>R$ 89</strong>
+                <button onclick="adicionarProduto('Óleo Brisa Marinha')">+</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=700" alt="Sérum facial">
+                <h3>Sérum Alga Azul</h3>
+                <p>Hidratação leve para a pele.</p>
+                <strong>R$ 119</strong>
+                <button onclick="adicionarProduto('Sérum Alga Azul')">+</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=700" alt="Vela aromática">
+                <h3>Vela Fim de Tarde</h3>
+                <p>Fragrância para relaxar.</p>
+                <strong>R$ 72</strong>
+                <button onclick="adicionarProduto('Vela Fim de Tarde')">+</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603905179139-9b3c6f8a8c5c?w=700" alt="Sabonete artesanal">
+                <h3>Sabonete Concha</h3>
+                <p>Limpeza delicada e perfumada.</p>
+                <strong>R$ 38</strong>
+                <button onclick="adicionarProduto('Sabonete Concha')">+</button>
+            </div>
+
+        </div>
+
+
+        <div class="explore-area">
+
+            <p>Leve um pouquinho da Maresia para sua casa.</p>
+
+            <a href="produtos.html" class="explore-btn">
+                <span>Descubra nossa loja</span>
+                <span class="arrow">↗</span>
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- EXPERIÊNCIA E INFORMAÇÕES -->
+    <section id="experiencia">
+
+        <div class="section-title">
+            <span>ALÉM DA MASSAGEM</span>
+            <h2>Conheça nosso universo</h2>
+            <p>
+                Mais do que um atendimento:
+                um lugar para se sentir cuidado.
+            </p>
+        </div>
+
+
+        <div class="experience-container">
+
+            <a href="#sobre" class="experience-card">
+                <span>✧</span>
+                <h3>Nosso espaço</h3>
+                <p>Conheça o ambiente preparado para receber você.</p>
+            </a>
+
+            <a href="#local" class="experience-card">
+                <span>⌖</span>
+                <h3>Onde estamos</h3>
+                <p>Encontre nosso endereço e horários.</p>
+            </a>
+
+            <a href="#pacotes" class="experience-card">
+                <span>♡</span>
+                <h3>Pacotes</h3>
+                <p>Descubra nossas experiências personalizadas.</p>
+            </a>
+
+            <a href="#depoimentos" class="experience-card">
+                <span>❀</span>
+                <h3>Depoimentos</h3>
+                <p>Conheça as experiências de nossos clientes.</p>
+            </a>
+
+            <a href="#presente" class="experience-card">
+                <span>◈</span>
+                <h3>Vale-presente</h3>
+                <p>Presenteie alguém com uma pausa especial.</p>
+            </a>
+
+            <a href="#sobre" class="experience-card">
+                <span>☼</span>
+                <h3>Nosso propósito</h3>
+                <p>Cuidado, acolhimento e atenção aos detalhes.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos">
+
+        <div class="section-title">
+            <span>PALAVRAS QUE ACOLHEM</span>
+            <h2>Quem viveu, conta.</h2>
+        </div>
+
+        <div class="testimonials">
+
+            <div class="quote">
+                <p>
+                    "Foi como apertar o botão de pausa.
+                    Saí com a sensação de que finalmente
+                    tinha respirado."
+                </p>
+                <span>— Marina</span>
+            </div>
+
+            <div class="quote">
+                <p>
+                    "Adorei poder escolher o tipo de massagem.
+                    A equipe ouviu tudo que eu precisava."
+                </p>
+                <span>— Luiza</span>
+            </div>
+
+            <div class="quote">
+                <p>
+                    "Ganhei um vale-presente e achei
+                    a experiência toda muito especial."
+                </p>
+                <span>— Camila</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VALE-PRESENTE -->
+    <section id="presente">
+
+        <div class="gift-container">
+
+            <div class="gift-art">
+                <div>
+                    <span>UM PRESENTE DE CALMA</span>
+                    <h2>Maresia</h2>
+                    <span>VALE-EXPERIÊNCIA</span>
+                </div>
+            </div>
+
+
+            <div class="gift-content">
+
+                <span>COMPARTILHE O BEM-ESTAR</span>
+
+                <h2>Presenteie com uma pausa.</h2>
+
+                <p>
+                    Escolha um valor e personalize
+                    uma mensagem para alguém especial.
+                </p>
+
+                <label for="giftName">Nome de quem receberá:</label>
+                <input type="text" id="giftName" placeholder="Digite o nome">
+
+                <label for="giftValue">Valor do presente:</label>
+                <select id="giftValue">
+                    <option value="150">R$ 150</option>
+                    <option value="250">R$ 250</option>
+                    <option value="350">R$ 350</option>
+                    <option value="500">R$ 500</option>
+                </select>
+
+                <label for="giftMessage">Mensagem:</label>
+                <input type="text" id="giftMessage" placeholder="Uma mensagem especial">
+
+                <button class="btn" onclick="criarPresente()">
+                    Criar vale-presente
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOCALIZAÇÃO -->
+    <section id="local">
+
+        <div class="section-title">
+            <span>VENHA NOS VISITAR</span>
+            <h2>Seu refúgio está mais perto.</h2>
+        </div>
+
+
+        <div class="location-container">
+
+            <div class="map">
+                <div>
+                    <span>⌖</span>
+                    <h3>Encontre a Maresia</h3>
+                    <p>Nosso espaço espera por você.</p>
+                </div>
+            </div>
+
+
+            <div class="location-info">
+
+                <h2>Maresia Spa & Bem-estar</h2>
+
+                <p>
+                    Rua das Conchas, 120 — Centro<br>
+                    Pouso Alegre · MG · Brasil
+                </p>
+
+                <p>
+                    <strong>WhatsApp:</strong> (35) 99999-0000
+                    <br>
+                    <strong>E-mail:</strong> contato@maresiaspa.com.br
+                </p>
+
+                <hr>
+
+                <h3>Horários de atendimento</h3>
+
+                <p>
+                    Terça a sexta: 9h às 20h<br>
+                    Sábado: 9h às 17h<br>
+                    Domingo e segunda: fechado
+                </p>
+
+                <a href="mailto:contato@maresiaspa.com.br" class="btn">
+                    Fale conosco
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>MARESIA</h2>
+                <p>
+                    Um refúgio inspirado no oceano.
+                    Respire fundo, desacelere e permita-se sentir.
+                </p>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="#servicos">Massagens</a>
+                <a href="#pacotes">Pacotes</a>
+                <a href="#produtos">Produtos</a>
+            </div>
+
+            <div>
+                <h3>Conheça</h3>
+                <a href="#sobre">Quem somos</a>
+                <a href="#experiencia">Nosso espaço</a>
+                <a href="#depoimentos">Depoimentos</a>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <a href="#presente">Vale-presente</a>
+                <a href="#local">Localização</a>
+                <a href="#inicio">Voltar ao topo ↑</a>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Maresia Spa. Projeto demonstrativo.
+        </p>
+
+    </footer>
+
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
