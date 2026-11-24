@@ -16,12 +16,12 @@ body {
     /* OCEANO: SUPERFÍCIE ATÉ AS PROFUNDEZAS */
     background: linear-gradient(
         180deg,
-        #bcecf0 0%,
-        #7dcbd5 14%,
-        #388eaa 32%,
-        #14546f 53%,
-        #092f49 75%,
-        #041d32 100%
+        #bcf0f0 0%,
+        #8bddd9 14%,
+        rgb(83, 192, 192) 32%,
+        #2aa2a7 53%,
+        #1e868d 75%,
+        #0d626b 100%
     );
 
     background-attachment: fixed;
@@ -64,7 +64,7 @@ section {
     align-items: center;
    
 
-    background: rgba(5, 44, 61, 0.38);
+    background: rgba(3, 82, 82, 0.267);
     backdrop-filter: blur(18px);
 
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -93,7 +93,7 @@ section {
 }
 
 .logo:hover img {
-    transform: rotate(-5deg) scale(1.04);
+    transform: rotate(-7deg) scale(1.09);
 }
 
 
@@ -540,27 +540,27 @@ section {
 /* IMAGENS DOS SERVIÇOS */
 
 .img1 {
-    background-image: url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900");
+    background-image: url("/src/img/massagem-relaxante.png");
 }
 
 .img2 {
-    background-image: url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=900");
+    background-image: url("/src/img/pedras-aquecidas.png");
 }
 
 .img3 {
-    background-image: url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900");
+    background-image: url("/src/img/drenagem-suave.png");
 }
 
 .img4 {
-    background-image: url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900");
+    background-image: url("/src/img/massagem-casal.png");
 }
 
 .img5 {
-    background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900");
+    background-image: url("/src/img/eventos-mar.png");
 }
 
 .img6 {
-    background-image: url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900");
+    background-image: url("/src/img/tratamento-facial.png");
 }
 
 .service-info {
@@ -641,6 +641,136 @@ section {
 }
 
 
+/* =========================================
+   SERVIÇOS - NOVA APARÊNCIA
+========================================= */
+
+#servicos {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Conteúdo na frente da decoração */
+
+#servicos .section-title,
+#servicos .services-container,
+#servicos .explore-area {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   IMAGENS MAIS NÍTIDAS
+========================================= */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 20px;
+    border: 1px solid rgba(210, 255, 250, 0.3);
+
+    background: rgba(15, 100, 112, 0.5);
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    will-change: transform;
+}
+
+.service-img {
+    height: 250px;
+
+    background-size: cover;
+    background-position: center;
+
+    filter: brightness(1.12) saturate(1.18) contrast(1.05);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.6s ease;
+}
+
+/* Zoom suave nas fotografias */
+
+.service-card:hover .service-img {
+    transform: scale(1.09);
+
+    filter: brightness(1.2) saturate(1.25) contrast(1.05);
+}
+
+/* =========================================
+   ANIMAÇÃO INTERATIVA DOS CARTÕES
+========================================= */
+
+.service-card:hover {
+    border-color: rgba(191, 255, 244, 0.85);
+
+    box-shadow:
+        0 20px 45px rgba(0, 30, 50, 0.3),
+        0 0 25px rgba(113, 235, 225, 0.18);
+}
+
+/* Brilho que atravessa o cartão */
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,255,255,0.18) 45%,
+        transparent 70%
+    );
+
+    transform: translateX(-120%);
+    transition: transform 0.8s ease;
+
+    pointer-events: none;
+    z-index: 3;
+}
+
+.service-card:hover::after {
+    transform: translateX(120%);
+}
+
+/* =========================================
+   INFORMAÇÕES SOBRE AS IMAGENS
+========================================= */
+
+.service-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 45, 65, 0.08) 0%,
+        rgba(3, 45, 65, 0.55) 45%,
+        rgba(3, 35, 52, 0.96) 100%
+    );
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.service-card:hover .service-overlay,
+.service-card:focus-within .service-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 /* =================================
    QUEM SOMOS
 ================================= */
@@ -658,7 +788,7 @@ section {
 
     border-radius: 45% 45% 20px 20px;
 
-    background-image: url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1100");
+    background-image: url("/src/img/deiramar.png");
     background-position: center;
     background-size: cover;
 
@@ -883,7 +1013,6 @@ section {
 .product-card img {
     width: 100%;
     height: 300px;
-    width: 390px;
     object-fit: cover;
 }
 
@@ -1034,19 +1163,15 @@ section {
     aspect-ratio: 1.2;
 
     display: grid;
-    place-items: center;
 
     border-radius: 20px;
 
-    background: linear-gradient(
-        145deg,
-        #c5e9dd,
-        #5ba8ad 55%,
-        #164c62
-    );
+   background-image: url("/src/img/Vale\ Presente\ Maresia\ Spa.png");
+    background-position: center;
+    background-size: cover;
 
-    color: #123e4c;
-    text-align: center;
+
+   
 }
 
 .gift-art div {
@@ -1424,3 +1549,216 @@ footer {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =====================================
+   ÁGUA-VIVA INTERATIVA NOS CARTÕES
+===================================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* CONTAINER */
+
+.jellyfish-card {
+    position: absolute;
+
+    z-index: 8;
+
+    top: 15px;
+    right: 22px;
+
+    width: 105px;
+    height: 145px;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transform: translateY(15px) scale(0.65);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+/* APARECE QUANDO PASSA O MOUSE */
+
+.service-card:hover .jellyfish-card,
+.service-card:focus-within .jellyfish-card {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+}
+
+/* CORPO DA ÁGUA-VIVA */
+
+.jelly-bell {
+    position: absolute;
+
+    top: 0;
+    left: 12px;
+
+    width: 82px;
+    height: 62px;
+
+    border-radius: 50% 50% 38% 38%;
+
+    background:
+        radial-gradient(
+            ellipse at 35% 25%,
+            rgba(255,255,255,0.95),
+            rgba(204,255,255,0.65) 25%,
+            rgba(119,219,231,0.48) 55%,
+            rgba(116,194,230,0.12) 100%
+        );
+
+    border: 1px solid rgba(226,255,255,0.85);
+
+    box-shadow:
+        0 0 12px rgba(175,255,255,0.65),
+        0 0 35px rgba(113,235,255,0.4),
+        inset 0 -8px 15px rgba(104,211,237,0.35);
+
+    animation: jellyPulse 3s ease-in-out infinite;
+}
+
+/* BORDA ONDULADA DO CORPO */
+
+.jelly-bell::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 12px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(190,250,255,0.65),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+
+}
+
+/* TENTÁCULOS */
+
+.jelly-strings {
+
+    position: absolute;
+
+    top: 54px;
+    left: 22px;
+
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+
+}
+
+.jelly-strings span {
+
+    display: block;
+
+    width: 3px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(220,255,255,0.85),
+        rgba(148,230,244,0.55),
+        rgba(148,230,244,0)
+    );
+
+    transform-origin: top;
+
+    animation: jellyTentacle 2.5s ease-in-out infinite;
+
+}
+
+/* VARIAÇÃO DOS TENTÁCULOS */
+
+.jelly-strings span:nth-child(1) {
+    height: 65px;
+    animation-delay: .2s;
+}
+
+.jelly-strings span:nth-child(2) {
+    height: 85px;
+    animation-delay: .5s;
+}
+
+.jelly-strings span:nth-child(3) {
+    height: 95px;
+    animation-delay: .8s;
+}
+
+.jelly-strings span:nth-child(4) {
+    height: 78px;
+    animation-delay: .3s;
+}
+
+.jelly-strings span:nth-child(5) {
+    height: 90px;
+    animation-delay: .6s;
+}
+
+.jelly-strings span:nth-child(6) {
+    height: 68px;
+    animation-delay: .9s;
+}
+
+
+/* =====================================
+   MOVIMENTOS ORGÂNICOS
+===================================== */
+
+@keyframes jellyPulse {
+
+    0%, 100% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    50% {
+        transform: scaleX(1.06) scaleY(.94);
+    }
+
+}
+
+@keyframes jellyTentacle {
+
+    0%, 100% {
+        transform: rotate(-13deg) skewX(-5deg);
+    }
+
+    50% {
+        transform: rotate(14deg) skewX(6deg);
+    }
+
+}
+
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jelly-bell,
+    .jelly-strings span {
+        animation: none;
+    }
+
+}
+
