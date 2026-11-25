@@ -16,33 +16,65 @@
 
 <body>
 
-    <!-- NAVEGAÇÃO -->
+    
+<!-- NAVEGAÇÃO MARESIA -->
 
-    <nav class="navbar">
+<header class="header-maresia">
 
-        <a href="#inicio" class="logo">
-            <img src="./src/img/Logo-maresia.png" alt="Maresia Quiosque de Massagem">
+    <!-- LOGO CENTRALIZADA -->
+
+    <div class="logo-area">
+
+        <a href="#inicio" class="logo-frame">
+            <img src="/src/img/Logo-maresia.png" alt="Maresia Quiosque de Massagem">
         </a>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+
+    <nav class="navbar">
 
         <div class="nav-links" id="navLinks">
 
             <a href="#inicio" class="active">Início</a>
             <a href="#servicos">Massagens</a>
-            <a href="#sobre">Quem somos</a>
             <a href="#pacotes">Pacotes</a>
             <a href="#produtos">Produtos</a>
+            <a href="#sobre">Quem somos</a>
             <a href="#experiencia">Experiência</a>
             <a href="#depoimentos">Depoimentos</a>
+            <a href="#presente">Agendar</a>
             <a href="#local">Localização</a>
-            <a href="#Contato">Contato</a>
 
         </div>
 
+        <!-- PESQUISA -->
+
+        <form class="search-box" id="searchForm">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Pesquisar..."
+                aria-label="Pesquisar seção do site"
+            >
+
+            <button type="submit" aria-label="Pesquisar">
+                <svg viewBox="0 0 24 24" width="19" height="19"
+                     fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m16 16 4 4"></path>
+                </svg>
+            </button>
+
+        </form>
+
     </nav>
 
-
+</header>
 
     <!-- TELA INICIAL -->
     <header class="hero" id="inicio">
@@ -178,12 +210,12 @@
                 <div class="service-img img5"></div>
 
                 <div class="service-info">
-                    <h3>Eventos a beira mar</h3>
+                    <h3>Meditação a beira mar</h3>
                     <p>Uma pausa dedicada a saúde mental e a paz interior.</p>
                 </div>
 
                 <div class="service-overlay">
-                    <h3>Eventos a beira mar</h3>
+                    <h3>Meditação a beira mar</h3>
                     <p>
                         Meditação guiada a beira mar para promever a saúde mental e a paz interior.
                     </p>
@@ -263,7 +295,7 @@
                 <div class="stats">
 
                     <div>
-                        <strong>6</strong>
+                        <strong>8</strong>
                         <span>Rituais de cuidado</span>
                     </div>
 
@@ -279,9 +311,16 @@
 
                 </div>
 
+
             </div>
 
+              <a href="massagens.html" class="explore-btn">
+                <span>Venha nos conhecer</span>
+                <span class="arrow">↗</span>
+            </a>
+
         </div>
+      
 
     </section>
 
@@ -452,7 +491,7 @@
 
             <div class="product-card">
                 <img src="./src/img/Produtos Maresia em Spa Oceânico 1.png" alt="Kit body splash e Loção hidratante">
-                <h3>Kit body splash e Loção hidratante</h3>
+                <h3>Protetor solar</h3>
                 <p>Óleo corporal nutritivo.</p>
                 <strong>R$ 89</strong>
                 <button onclick="adicionarProduto('Óleo Brisa Marinha')">+</button>
@@ -557,43 +596,111 @@
 
 
     <!-- DEPOIMENTOS -->
-    <section id="depoimentos">
+   
+<section id="depoimentos" class="depoimentos">
+    <div class="depoimentos-container">
 
-        <div class="section-title">
-            <span>PALAVRAS QUE ACOLHEM</span>
-            <h2>Quem viveu, conta.</h2>
-        </div>
+        <span class="depoimentos-subtitulo">PALAVRAS QUE ACOLHEM</span>
+        <h2>Quem viveu, conta.</h2>
+        <p class="depoimentos-descricao">
+            Experiências especiais de quem já conheceu o Marésia.
+        </p>
 
-        <div class="testimonials">
+        <div class="depoimentos-grid">
 
-            <div class="quote">
-                <p>
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=47"
+                     alt="Foto de Marina" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p class="comentario">
                     "Foi como apertar o botão de pausa.
-                    Saí com a sensação de que finalmente
-                    tinha respirado."
+                    Saí com a sensação de que finalmente tinha respirado."
                 </p>
-                <span>— Marina</span>
-            </div>
 
-            <div class="quote">
-                <p>
+                <span class="nome-depoimento">Marina</span>
+                <span class="tipo-experiencia">Massagem relaxante</span>
+            </article>
+
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=44"
+                     alt="Foto de Luiza" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p class="comentario">
                     "Adorei poder escolher o tipo de massagem.
                     A equipe ouviu tudo que eu precisava."
                 </p>
-                <span>— Luiza</span>
-            </div>
 
-            <div class="quote">
-                <p>
-                    "Ganhei um vale-presente e achei
-                    a experiência toda muito especial."
+                <span class="nome-depoimento">Luiza</span>
+                <span class="tipo-experiencia">Experiência personalizada</span>
+            </article>
+
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=49"
+                     alt="Foto de Camila" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p class="comentario">
+                    "Ganhei um vale-presente e achei a
+                    experiência toda muito especial."
                 </p>
-                <span>— Camila</span>
-            </div>
+
+                <span class="nome-depoimento">Camila</span>
+                <span class="tipo-experiencia">Vale-presente</span>
+            </article>
+
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=45"
+                     alt="Foto de Beatriz" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p class="comentario">
+                    "O ambiente é maravilhoso! Cada detalhe
+                    transmite tranquilidade. Quero voltar!"
+                </p>
+
+                <span class="nome-depoimento">Beatriz</span>
+                <span class="tipo-experiencia">Dia de spa</span>
+            </article>
+
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=32"
+                     alt="Foto de Isabela" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★☆</div>
+
+                <p class="comentario">
+                    "Uma experiência incrível. A massagem
+                    foi exatamente o que eu precisava depois de uma semana cansativa."
+                </p>
+
+                <span class="nome-depoimento">Isabela</span>
+                <span class="tipo-experiencia">Massagem terapêutica</span>
+            </article>
+
+            <article class="depoimento-card">
+                <img src="https://i.pravatar.cc/150?img=48"
+                     alt="Foto de Sofia" class="perfil-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p class="comentario">
+                    "Desde a recepção até o final do atendimento,
+                    tudo foi pensado para proporcionar conforto."
+                </p>
+
+                <span class="nome-depoimento">Sofia</span>
+                <span class="tipo-experiencia">Experiência completa</span>
+            </article>
 
         </div>
-
-    </section>
+    </div>
+</section>
 
 
     <!-- VALE-PRESENTE -->
@@ -657,9 +764,7 @@
 
             <div class="map">
                 <div>
-                    <span>⌖</span>
-                    <h3>Encontre a Maresia</h3>
-                    <p>Nosso espaço espera por você.</p>
+                   <img class="map" src="/src/img/Massagens ao pôr do sol à beira-mar 1.png" alt="">
                 </div>
             </div>
 
@@ -669,14 +774,16 @@
                 <h2>Maresia Spa & Bem-estar</h2>
 
                 <p>
-                    Rua das Conchas, 120 — Centro<br>
-                    Pouso Alegre · MG · Brasil
+                    Praia Calhetas<br>
+                   São Sebastião, SP
                 </p>
 
                 <p>
-                    <strong>WhatsApp:</strong> (35) 99999-0000
+                    <strong>WhatsApp:</strong> (11) 99999-0000
                     <br>
                     <strong>E-mail:</strong> contato@maresiaspa.com.br
+                    <br>
+                    <strong>Instagam</strong> 
                 </p>
 
                 <hr>
@@ -684,9 +791,9 @@
                 <h3>Horários de atendimento</h3>
 
                 <p>
-                    Terça a sexta: 9h às 20h<br>
+                    Seguando a sexta: 9h às 20h<br>
                     Sábado: 9h às 17h<br>
-                    Domingo e segunda: fechado
+                    Domingo : fechado
                 </p>
 
                 <a href="mailto:contato@maresiaspa.com.br" class="btn">
@@ -745,7 +852,7 @@
 
     <div id="toast" class="toast"></div>
 
-    <script src="script.js"></script>
+    <script src="/src/js/script.js"></script>
 
 </body>
 
