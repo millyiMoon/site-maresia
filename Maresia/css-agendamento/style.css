@@ -1,0 +1,592 @@
+
+/* =========================================
+   MARESIA - IDENTIDADE VISUAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #e9fbf8;
+
+    background: linear-gradient(
+        180deg,
+        #79d7d2 0%,
+        #45b5c0 20%,
+        #267f9b 48%,
+        #10516e 72%,
+        #061f38 100%
+    );
+
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.topo {
+    width: 100%;
+    height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(5, 45, 62, 0.16);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+
+    border-radius: 50%;
+    border: 2px solid rgba(220,255,255,0.7);
+
+    background: rgba(255,255,255,0.12);
+    padding: 5px;
+
+    margin-top: 65px;
+    z-index: 5;
+}
+
+/* =========================================
+   NAVEGAÇÃO
+========================================= */
+
+.nav {
+    position: relative;
+    z-index: 10;
+    padding: 0 15px;
+}
+
+.nav .navegacao {
+    width: min(890px, 100%);
+    min-height: 65px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    background: rgba(5, 48, 68, 0.30);
+    border: 1px solid rgba(225,255,255,0.25);
+    border-radius: 50px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.menu {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+    list-style: none;
+}
+
+.menu .produto-aba a {
+    display: block;
+    padding: 11px 15px;
+
+    color: #f0ffff;
+    text-decoration: none;
+    font-size: 13px;
+
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.menu .produto-aba a:hover,
+.menu .produto-aba a.agendar {
+    color: #126b7b;
+    background: rgba(255,255,255,0.92);
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.pagina-agendamento {
+    width: 90%;
+    max-width: 1450px;
+
+    margin: 70px auto;
+    padding: 45px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* =========================================
+   APRESENTAÇÃO
+========================================= */
+
+.apresentacao {
+    max-width: 520px;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    color: #f4e0b7;
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+.apresentacao h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(38px, 4.5vw, 61px);
+    font-weight: 400;
+    line-height: 1.2;
+
+    color: #f1ffff;
+    margin: 25px 0;
+}
+
+.apresentacao h1 span {
+    display: block;
+    color: #c2f1e9;
+    font-style: italic;
+}
+
+.apresentacao p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(239,255,255,0.83);
+    max-width: 450px;
+}
+
+/* IMAGEM */
+
+.imagem-agendamento {
+    width: 100%;
+    height: 280px;
+
+    margin-top: 30px;
+    overflow: hidden;
+
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.35);
+
+    box-shadow: 0 15px 40px rgba(0,25,45,0.20);
+}
+
+.imagem-agendamento img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+.imagem-agendamento:hover img {
+    transform: scale(1.06);
+}
+
+.detalhe-mar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: #d2f7f0;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.detalhe-mar span {
+    color: #f2d6a1;
+    font-size: 25px;
+}
+
+/* =========================================
+   FORMULÁRIO - EFEITO VIDRO
+========================================= */
+
+.area-formulario {
+    width: 100%;
+
+    padding: 38px;
+
+    background: rgba(5, 40, 60, 0.34);
+
+    border: 1px solid rgba(230,255,255,0.28);
+    border-radius: 25px;
+
+    box-shadow: 0 20px 55px rgba(0,25,45,0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.titulo-formulario {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.linha-decorativa {
+    width: 4px;
+    min-height: 75px;
+
+    background: #e6d0a2;
+    border-radius: 10px;
+}
+
+.form-subtitulo {
+    color: #e6d0a2;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-formulario h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 400;
+
+    color: #f3ffff;
+    margin: 8px 0;
+}
+
+.titulo-formulario p {
+    color: rgba(232,255,255,0.72);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+}
+
+.campo label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 9px;
+
+    color: #e5fafa;
+}
+
+.campo label span {
+    color: #b8d9d9;
+    font-weight: normal;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    border: 1px solid rgba(225,255,255,0.22);
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(3, 35, 55, 0.35);
+
+    color: #f0ffff;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: rgba(225,245,245,0.55);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #a8e9e2;
+    background: rgba(3, 35, 55, 0.52);
+
+    box-shadow: 0 0 0 3px rgba(168,233,226,0.12);
+}
+
+.campo select option {
+    background: #104b64;
+    color: white;
+}
+
+.campo input:disabled,
+.campo select:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.linha-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* ÍCONE DO CALENDÁRIO */
+
+.campo input[type="date"] {
+    color-scheme: dark;
+}
+
+/* =========================================
+   RESUMO
+========================================= */
+
+.resumo {
+    padding: 20px;
+    margin: 10px 0 25px;
+
+    background: rgba(180,235,230,0.10);
+
+    border: 1px solid rgba(220,255,255,0.18);
+    border-left: 3px solid #e6d0a2;
+
+    border-radius: 12px;
+}
+
+.resumo h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 400;
+
+    color: #f3ffff;
+    margin-bottom: 15px;
+}
+
+.resumo p {
+    font-size: 12px;
+    margin: 10px 0;
+    color: rgba(231,255,255,0.75);
+}
+
+.resumo strong {
+    color: #e7d5b1;
+}
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.botao-agendar {
+    width: 100%;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #d2f0e9;
+    color: #125d70;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.botao-agendar span {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.botao-agendar:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(0,25,45,0.20);
+}
+
+.botao-agendar:hover span {
+    transform: translateX(6px);
+}
+
+.aviso {
+    font-size: 10px;
+    color: rgba(230,250,250,0.65);
+
+    text-align: center;
+    line-height: 1.7;
+
+    margin-top: 16px;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    background: rgba(3, 25, 43, 0.72);
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    color: #ffffff;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer p {
+    letter-spacing: 4px;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 9px;
+}
+
+footer span {
+    font-size: 12px;
+    color: #b8dfdf;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .pagina-agendamento {
+        width: 94%;
+        padding: 25px;
+        gap: 35px;
+    }
+
+    .area-formulario {
+        padding: 28px;
+    }
+
+    .menu {
+        gap: 2px;
+    }
+
+    .menu .produto-aba a {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .topo {
+        height: 120px;
+    }
+
+    .logo {
+        width: 105px;
+        height: 105px;
+        margin-top: 50px;
+    }
+
+    .nav .navegacao {
+        margin-top: 25px;
+        border-radius: 20px;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .pagina-agendamento {
+        grid-template-columns: 1fr;
+        margin: 45px auto;
+        padding: 10px;
+        width: 92%;
+    }
+
+    .apresentacao {
+        max-width: 100%;
+    }
+
+    .apresentacao h1 {
+        font-size: 43px;
+    }
+
+    .imagem-agendamento {
+        height: 300px;
+    }
+
+    .area-formulario {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .menu .produto-aba a {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .pagina-agendamento {
+        width: 94%;
+    }
+
+    .apresentacao h1 {
+        font-size: 36px;
+    }
+
+    .imagem-agendamento {
+        height: 230px;
+    }
+
+    .linha-campos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .area-formulario {
+        padding: 22px 17px;
+    }
+
+    .titulo-formulario h2 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendamento | Maresia</title>
+
+    <link rel="stylesheet" href="./src/reset.css">
+
+    <link rel="stylesheet" href="./css-agendamento/style.css">
+
+
+
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="topo">
+        <img class="logo" src="./src/img/Logo-maresia (2).png" alt="Logo Maresia">
+    </header>
+
+    <section class="nav">
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="produto-aba"><a href="index.html">Início</a></li>
+                <li class="produto-aba"><a href="sobre.html">Sobre nós</a></li>
+                <li class="produto-aba"><a href="servicos.html">Serviços</a></li>
+                <li class="produto-aba"><a href="index.html#produtos">Produtos</a></li>
+                <li class="produto-aba"><a href="contato.html">Contato</a></li>
+                <li class="produto-aba"><a href="agendamento.html" class="agendar">Agendar</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+
+    <main class="pagina-agendamento">
+
+        <section class="apresentacao">
+
+            <span class="etiqueta">SUA PAUSA, SEU MOMENTO</span>
+
+            <h1>
+                O mar pode esperar.
+                <span>Seu bem-estar não.</span>
+            </h1>
+
+            <p>
+                Desacelere a rotina e permita-se viver uma experiência
+                de tranquilidade. Na Maresia, cada detalhe é pensado
+                para renovar suas energias e cuidar de você.
+            </p>
+
+            <div class="imagem-agendamento">
+                <img src="./src/img/Refúgio de Massagem à Beira-Mar.png"Experiência de agendamento da Maresia">
+            </div>
+
+            <div class="detalhe-mar">
+                <span>✧</span>
+                Um momento especial começa com autocuidado.
+            </div>
+
+        </section>
+
+        <section class="area-formulario">
+
+            <div class="titulo-formulario">
+                <span class="linha-decorativa"></span>
+
+                <div>
+                    <span class="form-subtitulo">MARESIA QUIOSQUE DE MASSAGEM</span>
+                    <h2>Faça seu agendamento</h2>
+                    <p>Preencha os dados e solicite seu momento de relaxamento.</p>
+                </div>
+            </div>
+
+            <form id="formAgendamento">
+
+                <div class="campo">
+                    <label for="nome">Seu nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Seu WhatsApp</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="campo">
+                    <label for="servico">Qual serviço deseja realizar?</label>
+                    <select id="servico" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="Massagem Relaxante">Massagem Relaxante</option>
+                        <option value="Pedras Aquecidas">Pedras Aquecidas</option>
+                        <option value="Drenagem Suave">Drenagem Suave</option>
+                        <option value="Massagem para Casal">Massagem para Casal</option>
+                        <option value="Ritual Facial">Ritual Facial</option>
+                        <option value="Eventos à beira-mar">Eventos à beira-mar</option>
+                    </select>
+                </div>
+
+                <div class="linha-campos">
+
+                    <div class="campo">
+                        <label for="data">Escolha a data</label>
+                        <input type="date" id="data" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="horario">Escolha o horário</label>
+                        <select id="horario" required disabled>
+                            <option value="">Selecione a data primeiro</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="campo">
+                    <label for="observacao">
+                        Alguma observação? <span>(opcional)</span>
+                    </label>
+
+                    <textarea id="observacao" placeholder="Conte-nos algo importante sobre seu atendimento..."
+                        rows="4"></textarea>
+                </div>
+
+                <div class="resumo" id="resumo">
+                    <h3>Resumo do agendamento</h3>
+
+                    <p><strong>Nome:</strong>
+                        <span id="resumoNome">Não informado</span>
+                    </p>
+
+                    <p><strong>Serviço:</strong>
+                        <span id="resumoServico">Não selecionado</span>
+                    </p>
+
+                    <p><strong>Data:</strong>
+                        <span id="resumoData">Não selecionada</span>
+                    </p>
+
+                    <p><strong>Horário:</strong>
+                        <span id="resumoHorario">Não selecionado</span>
+                    </p>
+                </div>
+
+                <button type="submit" class="botao-agendar">
+                    Solicitar agendamento <span>→</span>
+                </button>
+
+                <p class="aviso">
+                    Seu horário será confirmado após a verificação
+                    da disponibilidade pelo nosso atendimento.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MARESIA </p>
+        <span>Um momento especial começa com autocuidado.</span>
+    </footer>
+
+</body>
+
+</html>
